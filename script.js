@@ -1,3 +1,41 @@
+const form = document.getElementById("contactForm");
+
+console.log("FORM:", form);
+
+if (form) {
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
+        };
+
+        console.log("Sending to Google Sheets...", data);
+
+        try {
+            const res = await fetch("https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec", {
+                method: "POST",
+                body: JSON.stringify(data)
+            });
+
+            console.log("Response:", res);
+
+            alert("Sent!");
+
+            form.reset();
+
+        } catch (err) {
+            console.error(err);
+            alert("Error sending");
+        }
+
+    });
+}
+
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
