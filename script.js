@@ -81,3 +81,32 @@ const translations = {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+		const form = document.getElementById("contactForm");
+
+		form.addEventListener("submit", async (e) => {
+		
+		    e.preventDefault();
+		
+		    const data = {
+		        name: form.name.value,
+		        email: form.email.value,
+		        phone: form.phone.value,
+		        message: form.message.value
+		    };
+		
+		    try {
+		
+		        await fetch("https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec", {
+		            method: "POST",
+		            body: JSON.stringify(data)
+		        });
+		
+		        alert("Message sent!");
+		        form.reset();
+		
+		    } catch (error) {
+		        alert("Error sending message.");
+		    }
+		});
