@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>Adore Gelato</title>
+	<link rel="icon" type="image/png" href="Images/favicon.png">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="Images/logo.png" alt="Adore Gelato Logo">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-right" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav-about">За Нас</a></li>
+                    <li><a href="#flavors" data-i18n="nav-flavors">Вкусове</a></li>
+                    <li><a href="#coffee" data-i18n="nav-coffee">Кафе</a></li>
+                    <li><a href="#milkshakes" data-i18n="nav-milkshakes">Млечни шейкове</a></li>
+                    <li><a href="#partnership" data-i18n="nav-partnership">Партньорство</a></li>
+                    <li><a href="#locations" data-i18n="nav-locations">Локации</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Adoregelato"><img src="Images/facebook.png" alt="FB"></a>
+                    <a href="https://www.instagram.com/adore.gelato"><img src="Images/instagram.png" alt="IG"></a>
+                    <a href="https://www.tiktok.com/@adore.gelato"><img src="Images/tiktok.png" alt="TT"></a>
+                </div>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="changeLang('bg', this)">BG</button>
+                    <button class="lang-btn" onclick="changeLang('en', this)">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="reveal">ADORE GELATO</h1>
+            <p class="reveal" data-i18n="hero-p">Преживяване Среща Емоция</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="split-section">
+        <div class="split-image-wrap reveal">
+            <img src="Images/photo1.jpg" alt="Gelato">
+        </div>
+        <div class="split-text reveal">
+            <h1 data-i18n="about-h1">А кои сме ние?</h1>
+            <div style="width: 50px; height: 3px; background: var(--green); margin: 20px 0;"></div>
+            <p data-i18n="about-p1">Ние сме малък екип с голям опит в производството и продажбата на италианско джелато. Нашата мечта е да накараме хората да се усмихват, след всяка малка хапка от нашето джелато.</p>
+            <p style="margin-top:20px" data-i18n="about-p2">Наричаме го Adore gelato, което означава &quot;обожавам сладолед&quot;. Сервираме щастието във фунийка, поднесена с много любов и грижа.</p>
+        </div>
+    </section>
+
+    <!-- FLAVORS -->
+    <section id="flavors" class="section-padding">
+        <div class="container">
+            <h2 class="text-center reveal" style="font-size: 3rem;" data-i18n="flav-h2">Нашите Вкусове</h2>
+            <div class="slider-wrapper">
+                <div class="slider-nav">
+                    <button class="nav-btn" onclick="slide('left')">←</button>
+                    <button class="nav-btn" onclick="slide('right')">→</button>
+                </div>
+                <div class="flavor-slider" id="flavorSlider">
+                    <div class="flavor-card reveal">
+                        <img src="Images/photo3.png" alt="Chocolate">
+                        <div class="flavor-overlay"><h3 data-i18n="f1-h">Signature Cioccolato</h3><p data-i18n="f1-p">Интензивен шоколадов вкус</p></div>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <img src="Images/fruit.png" alt="Fruit">
+                        <div class="flavor-overlay"><h3 data-i18n="f2-h">Frutti di Bosco</h3><p data-i18n="f2-p">Свежест от горски плодове</p></div>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <img src="Images/vanilla.png" alt="Vanilla">
+                        <div class="flavor-overlay"><h3 data-i18n="f3-h">Classic Vanilla</h3><p data-i18n="f3-p">Истинска бурбонска ванилия</p></div>
+                    </div>
+                    <div class="flavor-card reveal">
+                        <img src="Images/pistacchio.png" alt="Pistachio">
+                        <div class="flavor-overlay"><h3 data-i18n="f4-h">Pistachio di Bronte</h3><p data-i18n="f4-p">Премиум сицилиански шамфъстък</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="flavors.html" class="btn btn-primary reveal" data-i18n="flav-btn">Виж всички вкусове</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COFFEE -->
+    <section id="coffee" class="section-padding bg-dark">
+        <div class="container">
+            <div class="grid-2">
+                <div class="reveal">
+                    <h2 style="font-size: 3.5rem; margin-bottom: 20px;" data-i18n="coff-h2">Кафе & Афогато</h2>
+                    <p data-i18n="coff-p">Завършете вашето джелато преживяване с чаша перфектно приготвено италианско кафе. Ние подбираме най-добрите зърна, за да гарантираме аромат и плътност във всяка чаша.</p>
+			<br><p data-i18n="coff-p2">Или изберете Афогато, което на италиански означава "удавен", улавя същността на този десерт. Това италианско удоволствие, породено от комбинацията на еспресо и сладолед, e любимо лакомство на хора по целия свят.</p>
+
+                </div>
+                <div class="reveal">
+                    <img src="Images/photo6.jpg" alt="Coffee" style="box-shadow: 20px 20px 0 var(--green);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MILKSHAKES -->
+    <section id="milkshakes" class="section-padding">
+        <div class="container">
+            <div class="grid-2" style="grid-template-columns: 1fr 1.2fr;">
+                <div class="reveal">
+                    <img src="Images/photo5.png" alt="Milkshake" style="box-shadow: -20px 20px 0 var(--red);">
+                </div>
+                <div class="reveal">
+                    <h2 style="font-size: 3.5rem; margin-bottom: 20px;" data-i18n="milk-h2">Млечни шейкове</h2>
+                    <p data-i18n="milk-p">Насладете се на гъсти и кремообразни млечни шейкове, приготвени с нашето занаятчийско джелато. Изберете любимия си вкус и му се насладете по нов начин.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERSHIP -->
+    <section id="partnership" class="section-padding bg-dark">
+        <div class="container text-center">
+            <div class="reveal">
+                <h2 style="font-size: 3rem; margin-bottom: 30px;" data-i18n="part-h2">Партньорство</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p data-i18n="part-p">Желаете ли да предложите автентично италианско джелато във вашия обект? Ние предлагаме B2B решения за ресторанти, хотели и кафенета.</p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 40px; background: var(--white); color: var(--dark);" data-i18n="part-btn">Станете наш партньор</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATIONS -->
+    <section id="locations" class="section-padding" style="background: #f0f0f0;">
+        <div class="container">
+            <div class="grid-2">
+                <div class="reveal">
+                    <h2 data-i18n="loc-h2">Нашите обекти</h2>
+                    <p style="margin-top:20px">📍 Пловдив, ул. Райко Даскалов 5</p>
+                    <p>📍 Карлово, ул. Водопад 5</p>
+                    <p>📍 Хисаря, бул. Генерал Гурко</p>
+                    <p>📍 гр.Хисаря, Terme di Hissar</p>
+                    <p>📍 гр.Карлово, Ресторант "Едно време"</p>
+                    <p>📍 гр.Хисаря, Хотел Empire Balneo & Spa</p>
+                    <p>📍 гр.Казанлък, Пекарна Джоржо</p>
+                    <br>
+			<h2 data-i18n="contact-h2">Контакти</h2>
+			<br>
+                    <p>✉️ adoregelatohisarya@gmail.com</p>
+                    <p>📞 0888 223 559; 0885049091</p>
+			<p>📍 ул."Деветте деца на Еани" 12, 4180 Хисаря</p>	
+                </div>
+                <div class="reveal" id="contact">
+                    <h2 data-i18n="cont-h2">Свържете се с нас</h2>
+                    <form style="margin-top: 20px;">
+                        <input type="text" placeholder="Име / Name" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+                        <input type="email" placeholder="Email" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+			<input type="phone" placeholder="Телефон / Phone number" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+                        <textarea placeholder="Съобщение / Message" rows="4" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;"></textarea>
+                        <button class="btn btn-primary" type="button" style="width:100%" data-i18n="cont-send">Изпрати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/Adoregelato"><img src="Images/facebook.png" alt="FB" width="30" style="filter:none;"></a>
+                <a href="https://www.instagram.com/adore.gelato"><img src="Images/instagram.png" alt="IG" width="30" style="filter:none;"></a>
+                <a href="https://www.tiktok.com/@adore.gelato"><img src="Images/tiktok.png" alt="TT" width="30" style="filter:none;"></a>
+            </div>
+            <p>&copy; 2026 ADORE GELATO. MADE WITH PASSION IN BULGARIA.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

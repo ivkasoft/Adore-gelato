@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <title>Adore Gelato</title>
+	<link rel="icon" type="image/png" href="Images/favicon.png">
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="Images/logo.png" alt="Adore Gelato Logo">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-right" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#about" data-i18n="nav-about">За Нас</a></li>
+                    <li><a href="index.html#flavors" data-i18n="nav-flavors">Вкусове</a></li>
+                    <li><a href="index.html#coffee" data-i18n="nav-coffee">Кафе</a></li>
+                    <li><a href="index.html#milkshakes" data-i18n="nav-milkshakes">Млечни шейкове</a></li>
+                    <li><a href="index.html#partnership" data-i18n="nav-partnership">Партньорство</a></li>
+                    <li><a href="index.html#locations" data-i18n="nav-locations">Локации</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Adoregelato"><img src="Images/facebook.png" alt="FB"></a>
+                    <a href="https://www.instagram.com/adore.gelato"><img src="Images/instagram.png" alt="IG"></a>
+                    <a href="https://www.tiktok.com/@adore.gelato"><img src="Images/tiktok.png" alt="TT"></a>
+                </div>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="changeLang('bg', this)">BG</button>
+                    <button class="lang-btn" onclick="changeLang('en', this)">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<!-- Content -->
+
+    <header class="page-header">
+        <div class="container">
+            <h1 style="font-size: 4rem; letter-spacing: -1px;" data-i18n="page-h1">Нашето Джелато</h1>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 style="font-size: 2.8rem; margin-bottom: 20px;" data-i18n="phil-h2">Философия на качеството</h2>
+                <p style="max-width: 900px; margin: 0 auto; font-size: 1.2rem; color: #555;" data-i18n="phil-p">
+                    Богатият и наситен вкус на нашето джелато се базира на качественото прясно мляко и първокласна животинска сметана, които влагаме в производството му. Нашите майстори знаят как да ги обработят, за да получат добре познатия му вид с най-изявени вкусови качества.
+                </p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card reveal">
+                    <h3 data-i18n="card1-h">Автентичност</h3>
+                    <p data-i18n="card1-p">Истинско италианско джелато, произведено по оригинални рецепти директно от сърцето на Италия.</p>
+                </div>
+                <div class="philosophy-card reveal" style="border-top-color: var(--red);">
+                    <h3 data-i18n="card2-h">Натуралност</h3>
+                    <p data-i18n="card2-p">Пълномаслено мляко, животинска сметана, пресни плодове и подбрани ядки. Без изкуствени оцветители.</p>
+                </div>
+                <div class="philosophy-card reveal">
+                    <h3 data-i18n="card3-h">Разнообразие</h3>
+                    <p data-i18n="card3-p">През годината произвеждаме повече от 30 вида джелато и сорбети, за да задоволим и най-взискателните небца.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="flavor-menu section-padding">
+        <div class="container">
+            <div class="text-center reveal">
+                <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--green); font-weight: 600; margin-bottom: 10px;" data-i18n="menu-pre">Изберете своя любим</p>
+                <h2 style="font-size: 3rem; margin-bottom: 50px;" data-i18n="menu-h2">Меню Вкусове</h2>
+            </div>
+
+            <div class="menu-grid">
+                <!-- КЛАСИЧЕСКИ -->
+                <div class="menu-category reveal">
+                    <h2 data-i18n="cat1-h">Класически</h2>
+                    <ul class="menu-list">
+                        <li data-i18n="cat1-1">Сметана / Panna</li>
+                        <li data-i18n="cat1-2">Ванилия / Vanilla</li>
+                        <li data-i18n="cat1-3">Шоколад / Chocolate</li>
+                        <li data-i18n="cat1-4">Киндер / Kinder</li>
+                        <li data-i18n="cat1-5">Карамел / Caramel</li>
+                        <li data-i18n="cat1-6">Страчатела / Stracciatella</li>
+                        <li data-i18n="cat1-7">Ягода / Strawberry</li>
+                        <li data-i18n="cat1-8">Кисело мляко / Yogurt</li>
+                        <li data-i18n="cat1-9">Чийзкейк / Cheesecake</li>
+                    </ul>
+                </div>
+
+                <!-- ИТАЛИАНСКИ СПЕЦИАЛИТЕТИ -->
+                <div class="menu-category reveal">
+                    <h2 data-i18n="cat2-h">Специални</h2>
+                    <ul class="menu-list">
+                        <li data-i18n="cat2-1">Тирамису / Tiramisu</li>
+                        <li data-i18n="cat2-2">Пистачио / Pistachio</li>
+                        <li data-i18n="cat2-3">Ночиола / Nocciola</li>
+                        <li data-i18n="cat2-4">Оро Доро / Oro Doro</li>
+                        <li data-i18n="cat2-5">Амарена / Amarena</li>
+                        <li data-i18n="cat2-6">Маскарпоне с кайсии</li>
+                        <li data-i18n="cat2-7">Рикота с круши</li>
+                        <li data-i18n="cat2-8">Джандуя / Gianduja</li>
+                    </ul>
+                </div>
+
+                <!-- СЕЗОННИ -->
+                <div class="menu-category reveal">
+                    <h2 data-i18n="cat3-h">Сезонни</h2>
+                    <ul class="menu-list">
+                        <li data-i18n="cat3-1">Летни плодови сорбета</li>
+                        <li data-i18n="cat3-2">Шоколад с ром</li>
+                        <li data-i18n="cat3-3">Лате с бейлис</li>
+                        <li data-i18n="cat3-4">Бял шоколад с малини</li>
+                        <li data-i18n="cat3-5">Манго сорбе</li>
+                        <li data-i18n="cat3-6">Лимон и босилек</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/Adoregelato"><img src="Images/facebook.png" alt="FB" width="30" style="filter:none;"></a>
+                <a href="https://www.instagram.com/adore.gelato"><img src="Images/instagram.png" alt="IG" width="30" style="filter:none;"></a>
+                <a href="https://www.tiktok.com/@adore.gelato"><img src="Images/tiktok.png" alt="TT" width="30" style="filter:none;"></a>
+            </div>
+            <p>&copy; 2026 ADORE GELATO. MADE WITH PASSION IN BULGARIA.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
