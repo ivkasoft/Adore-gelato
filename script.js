@@ -98,7 +98,7 @@ const translations = {
 		
 		    try {
 		
-		        await fetch("https://script.google.com/macros/s/AKfycbxDy7oDQq5kIxdl4JwIHz6awpko_cshTn7eTO5mXPs/dev", {
+		        await fetch("https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec", {
 		            method: "POST",
 		            body: JSON.stringify(data)
 		        });
