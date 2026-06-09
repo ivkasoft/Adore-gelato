@@ -1,3 +1,15 @@
+console.log("SCRIPT LOADED");
+
+// 1. взимаш формата от HTML
+const form = document.getElementById("contactForm");
+console.log("FORM:", form);
+
+// 2. слушаш submit
+form.addEventListener("submit", (e) => {
+    console.log("SUBMIT WORKS");
+
+    e.preventDefault();
+});
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
