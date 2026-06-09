@@ -1,5 +1,21 @@
 const form = document.getElementById("contactForm");
 
+console.log("Form found:", form);
+
+if (form) {
+    form.addEventListener("submit", async (e) => {
+
+        console.log("SUBMIT CLICKED");
+
+        e.preventDefault();
+
+        alert("Тест - бутонът работи!");
+
+    });
+}
+
+const form = document.getElementById("contactForm");
+
 if (form) {
 
     form.addEventListener("submit", async (e) => {
