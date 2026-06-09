@@ -1,63 +1,15 @@
+console.log("SCRIPT LOADED");
+
+// 1. взимаш формата от HTML
 const form = document.getElementById("contactForm");
+console.log("FORM:", form);
 
-console.log("Form found:", form);
+// 2. слушаш submit
+form.addEventListener("submit", (e) => {
+    console.log("SUBMIT WORKS");
 
-if (form) {
-    form.addEventListener("submit", async (e) => {
-
-        console.log("SUBMIT CLICKED");
-
-        e.preventDefault();
-
-        alert("Тест - бутонът работи!");
-
-    });
-}
-
-const form = document.getElementById("contactForm");
-
-if (form) {
-
-    form.addEventListener("submit", async (e) => {
-
-        e.preventDefault();
-
-        const data = {
-            name: form.name.value,
-            email: form.email.value,
-            phone: form.phone.value,
-            message: form.message.value
-        };
-
-        try {
-
-            const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                }
-            );
-
-            if (response.ok) {
-                alert("Съобщението е изпратено успешно!");
-                form.reset();
-            } else {
-                alert("Грешка при изпращане.");
-            }
-
-        } catch (error) {
-            console.error(error);
-            alert("Грешка при връзката.");
-        }
-
-    });
-
-}
-
+    e.preventDefault();
+});
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
@@ -141,3 +93,32 @@ const translations = {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+		const form = document.getElementById("contactForm");
+
+		form.addEventListener("submit", async (e) => {
+		
+		    e.preventDefault();
+		
+		    const data = {
+		        name: form.name.value,
+		        email: form.email.value,
+		        phone: form.phone.value,
+		        message: form.message.value
+		    };
+		
+		    try {
+		
+		        await fetch("https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec", {
+		            method: "POST",
+		            body: JSON.stringify(data)
+		        });
+		
+		        alert("Message sent!");
+		        form.reset();
+		
+		    } catch (error) {
+		        alert("Error sending message.");
+		    }
+		});
