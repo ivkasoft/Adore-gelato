@@ -10,6 +10,17 @@ form.addEventListener("submit", (e) => {
 
     e.preventDefault();
 });
+
+const errorDiv = document.getElementById("formError");
+
+if (!name || !email || !phone || !message) {
+    errorDiv.textContent =
+        "Моля, попълнете всички полета преди да изпратите формата.";
+    return;
+}
+
+errorDiv.textContent = "";
+
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
