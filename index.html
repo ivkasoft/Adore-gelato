@@ -170,12 +170,13 @@
                 <div class="reveal" id="contact">
                     <h2 data-i18n="cont-h2">Свържете се с нас</h2>
                     <form id="contactForm" style="margin-top: 20px;">
-                        <input type="text" name="name" placeholder="Име / Name" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
-                        <input type="email" name="email" placeholder="Email" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
-			<input type="tel" name="phone" placeholder="Телефон / Phone number" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
-                        <textarea name="message" placeholder="Съобщение / Message" rows="4" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;"></textarea>
+                        <input type="text" name="name" placeholder="Име / Name" required style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+                        <input type="email" name="email" placeholder="Email" required style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+			<input type="tel" name="phone" placeholder="Телефон / Phone number" required style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;">
+                        <textarea name="message" placeholder="Съобщение / Message" required rows="4" style="width:100%; padding: 15px; margin-bottom:10px; border:1px solid #ddd;"></textarea>
                         <button class="btn btn-primary" type="submit" style="width:100%" data-i18n="cont-send">Изпрати</button>
                     </form>
+					<div id="formError" style="color:red; margin-top:10px;"></div>
                 </div>
             </div>
         </div>
