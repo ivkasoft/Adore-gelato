@@ -10,30 +10,6 @@ form.addEventListener("submit", (e) => {
 
     e.preventDefault();
 });
-
-const form = document.getElementById("contactForm");
-const errorDiv = document.getElementById("formError");
-
-form.addEventListener("submit", async (e) => {
-
-    e.preventDefault();
-
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const phone = form.phone.value.trim();
-    const message = form.message.value.trim();
-
-    if (!name || !email || !phone || !message) {
-        errorDiv.textContent =
-            "Моля, попълнете всички полета преди да изпратите формата.";
-        return;
-    }
-
-    errorDiv.textContent = "";
-
-    // Тук е fetch(...) към Google Apps Script
-});
-
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
