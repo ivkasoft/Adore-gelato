@@ -1,3 +1,47 @@
+const form = document.getElementById("contactForm");
+
+if (form) {
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            message: form.message.value
+        };
+
+        try {
+
+            const response = await fetch(
+                "https://script.google.com/macros/s/AKfycbx9jGrCmHC1JZ967vzp6siHb5_K_PxX8NdFL7AQWG1TvODxNRVhrgc3B5EQdnyCQYoy/exec",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+            );
+
+            if (response.ok) {
+                alert("Съобщението е изпратено успешно!");
+                form.reset();
+            } else {
+                alert("Грешка при изпращане.");
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert("Грешка при връзката.");
+        }
+
+    });
+
+}
+
 const translations = {
             bg: {
                 "nav-about": "За Нас", "nav-flavors": "Вкусове", "nav-coffee": "Кафе", "nav-milkshakes": "Шейкове", 
