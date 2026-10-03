@@ -35,7 +35,7 @@ if (form) {
 
     phoneInput.addEventListener('blur', () => {
         validateField(phoneInput, document.getElementById('phoneError'),
-            v => v.length >= 6,
+            v => v.length >= 6 && v.length <= 30,
             'Моля въведете валиден телефон / Please enter a valid phone number');
     });
 
