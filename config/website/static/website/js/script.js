@@ -41,7 +41,7 @@ if (form) {
 
     messageInput.addEventListener('blur', () => {
         validateField(messageInput, document.getElementById('messageError'),
-            v => v.length > 0,
+            v => v.length > 0 && v.length < 2000,
             'Моля въведете съобщение / Please enter a message');
     });
 }
